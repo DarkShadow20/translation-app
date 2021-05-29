@@ -1,9 +1,9 @@
-var btnTranslate=document.querySelector("#btn-translate")
-var txtInput=document.querySelector('#txt-input');
-var outputDiv=document.querySelector('#txt-output');
+let btnTranslate=document.querySelector("#btn-translate")
+let txtInput=document.querySelector('#txt-input');
+let outputDiv=document.querySelector('#txt-output');
 
 //var serverurl="https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
-var serverURL= "https://api.funtranslations.com/translate/minion.json"
+const serverURL= "https://api.funtranslations.com/translate/minion.json"
 
 function getTranslationURL(input){
     return serverURL + "?" + "text=" + input
@@ -17,7 +17,7 @@ function errorHandler(error){
 
 function clickHandler(){
     
-    var inputText=txtInput.value  // taking input
+    let inputText=txtInput.value  // taking input
     
     //calling server for processing
     fetch(getTranslationURL(inputText))
